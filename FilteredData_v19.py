@@ -22,7 +22,7 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Reset all containers to full width */
+    /* Main container styles */
     .main .block-container {
         max-width: 100% !important;
         padding: 0 !important;
@@ -38,21 +38,6 @@ st.markdown(
         width: 100% !important;
     }
 
-    .css-1y4p8pa > div {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Force full width on all elements */
-    .element-container, .stMarkdown, .stDataFrame {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
     /* Force width on all Streamlit elements */
     .stSelectbox, .stMultiSelect, .stNumberInput, .stDateInput, .stTextInput {
         width: 100% !important;
@@ -63,13 +48,6 @@ st.markdown(
 
     /* Override any potential max-width constraints */
     .stApp {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    .stApp > div {
         max-width: 100% !important;
         width: 100% !important;
         padding: 0 !important;
@@ -111,192 +89,12 @@ st.markdown(
         margin: 0 !important;
     }
 
-    /* Override any potential container constraints */
-    .container {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Force width on all divs within the main container */
-    .main .block-container > div {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Ensure buttons take appropriate width */
+    /* Button styles */
     .stButton > button {
         width: 100% !important;
         min-width: 100% !important;
         padding: 0.5rem !important;
         margin: 0 !important;
-    }
-
-    /* Custom style for the histogram count selector */
-    div[data-testid="stSelectbox"]:has(div:contains("Number of Histograms")) {
-        width: 100% !important;
-    }
-
-    /* Button container styles */
-    .button-container {
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        padding: 0 !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-    }
-
-    /* File section styles */
-    .file-section {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        width: 100%;
-        padding: 0 !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-    }
-
-    .file-text {
-        margin-top: 5px;
-        text-align: right;
-        width: 100%;
-    }
-
-    /* Horizontal line styles */
-    hr {
-        margin: 0 !important;
-        border: none;
-        height: 1px;
-        background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-        width: 100%;
-        max-width: 100% !important;
-    }
-
-    /* Vertical line styles */
-    .vl {
-        margin: 0 !important;
-        border: none;
-        width: 1px;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-        height: 100%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    /* Table styles */
-    .custom-table {
-        margin: 0 !important;
-        padding: 0 !important;
-        font-size: 12px;
-        width: 100%;
-        max-width: 100% !important;
-    }
-
-    .custom-table td {
-        border: none !important;
-        padding: 2px 10px !important;
-    }
-
-    .custom-table td:first-child {
-        text-align: left;
-    }
-
-    .custom-table td:last-child {
-        text-align: right;
-    }
-
-    .custom-table th {
-        display: none;
-    }
-
-    .bold-text {
-        font-weight: bold;
-    }
-
-    /* Chart container styles */
-    .chart-container {
-        width: 100%;
-        margin: 0 !important;
-        padding: 0 !important;
-        max-width: 100% !important;
-    }
-
-    /* Metric container styles */
-    [data-testid="metric-container"] {
-        width: 100% !important;
-        padding: 0 !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-    }
-
-    /* Stacked columns fix */
-    [data-testid="stHorizontalBlock"] {
-        flex-wrap: nowrap !important;
-        gap: 0 !important;
-        padding: 0 !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-    }
-
-    /* Tooltip styles */
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-        padding: 0 !important;
-    }
-    
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 300px;
-        background-color: #f9f9f9;
-        color: #333;
-        text-align: left;
-        border-radius: 6px;
-        padding: 10px;
-        position: absolute;
-        z-index: 1;
-        top: 125%;
-        left: 50%;
-        margin-left: -150px;
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-    
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    /* Streamlit elements width fix */
-    .element-container, .stDateInput, .stNumberInput {
-        width: 100% !important;
-        padding: 0 !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-    }
-
-    /* Force full width on all Streamlit elements */
-    .stMarkdown, .stDataFrame, .stSelectbox, .stMultiSelect, .stNumberInput, .stDateInput, .stTextInput, .stButton {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Ensure all containers take full width */
-    .main .block-container, .stApp, .stApp > div, .element-container, .stMarkdown, .stDataFrame {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
     }
 
     /* File uploader styles */
@@ -322,13 +120,6 @@ st.markdown(
         max-width: 100% !important;
     }
 
-    .stButton > button {
-        width: 100% !important;
-        min-width: 100% !important;
-        padding: 0.5rem !important;
-        margin: 0 !important;
-    }
-
     /* Override any potential width restrictions */
     * {
         max-width: 100% !important;
@@ -349,6 +140,30 @@ st.markdown(
         max-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
+    }
+
+    /* Override Streamlit's default container */
+    .stApp > div {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Force width on all containers */
+    .element-container, .stMarkdown, .stDataFrame {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Ensure all Streamlit elements take full width */
+    .stMarkdown, .stDataFrame, .stSelectbox, .stMultiSelect, .stNumberInput, .stDateInput, .stTextInput, .stButton {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
     </style>
     """,
