@@ -22,122 +22,122 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Main container styles */
+    /* Reset all containers to full width */
     .main .block-container {
-        max-width: 1200px !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
         width: 100% !important;
     }
 
     /* Override Streamlit's default container width */
     .css-1y4p8pa {
-        max-width: 1200px !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
         width: 100% !important;
     }
 
     .css-1y4p8pa > div {
-        max-width: 1200px !important;
+        max-width: 100% !important;
         width: 100% !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
-    /* Ensure full width for all main elements */
+    /* Force full width on all elements */
     .element-container, .stMarkdown, .stDataFrame {
         width: 100% !important;
-        max-width: 1200px !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Force width on all Streamlit elements */
     .stSelectbox, .stMultiSelect, .stNumberInput, .stDateInput, .stTextInput {
         width: 100% !important;
-        max-width: 1200px !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Override any potential max-width constraints */
     .stApp {
-        max-width: 1200px !important;
+        max-width: 100% !important;
         width: 100% !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .stApp > div {
-        max-width: 1200px !important;
+        max-width: 100% !important;
         width: 100% !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Force width on plot containers */
     .plot-container, .js-plotly-plot {
         width: 100% !important;
-        max-width: 1200px !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Ensure columns take full width */
     [data-testid="column"] {
         width: 100% !important;
-        flex: 1 1 calc(33.333% - 1rem) !important;
-        min-width: 200px !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Force width on metric containers */
     [data-testid="metric-container"] {
         width: 100% !important;
-        max-width: 1200px !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Ensure horizontal blocks take full width */
     [data-testid="stHorizontalBlock"] {
         flex-wrap: nowrap !important;
-        gap: 1rem !important;
+        gap: 0 !important;
         width: 100% !important;
-        max-width: 1200px !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Override any potential container constraints */
     .container {
-        max-width: 1200px !important;
+        max-width: 100% !important;
         width: 100% !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Force width on all divs within the main container */
     .main .block-container > div {
-        max-width: 1200px !important;
+        max-width: 100% !important;
         width: 100% !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Ensure buttons take appropriate width */
     .stButton > button {
-        width: auto !important;
-        min-width: 150px !important;
-        padding: 0.5rem 1rem !important;
-        margin: 0.5rem !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        padding: 0.5rem !important;
+        margin: 0 !important;
     }
 
     /* Custom style for the histogram count selector */
     div[data-testid="stSelectbox"]:has(div:contains("Number of Histograms")) {
-        width: 50px !important;
+        width: 100% !important;
     }
 
     /* Button container styles */
@@ -145,9 +145,9 @@ st.markdown(
         display: flex;
         justify-content: flex-end;
         width: 100%;
-        padding: 1rem !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
     }
 
     /* File section styles */
@@ -156,9 +156,9 @@ st.markdown(
         flex-direction: column;
         align-items: flex-end;
         width: 100%;
-        padding: 1rem !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
     }
 
     .file-text {
@@ -169,17 +169,17 @@ st.markdown(
 
     /* Horizontal line styles */
     hr {
-        margin: 1rem 0;
+        margin: 0 !important;
         border: none;
         height: 1px;
         background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
         width: 100%;
-        max-width: 1200px !important;
+        max-width: 100% !important;
     }
 
     /* Vertical line styles */
     .vl {
-        margin: 0 1rem;
+        margin: 0 !important;
         border: none;
         width: 1px;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
@@ -191,11 +191,11 @@ st.markdown(
 
     /* Table styles */
     .custom-table {
-        margin: 0;
-        padding: 0;
+        margin: 0 !important;
+        padding: 0 !important;
         font-size: 12px;
         width: 100%;
-        max-width: 1200px !important;
+        max-width: 100% !important;
     }
 
     .custom-table td {
@@ -222,26 +222,26 @@ st.markdown(
     /* Chart container styles */
     .chart-container {
         width: 100%;
-        margin: 0 auto;
-        padding: 1rem !important;
-        max-width: 1200px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
     }
 
     /* Metric container styles */
     [data-testid="metric-container"] {
         width: 100% !important;
-        padding: 1rem !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
     }
 
     /* Stacked columns fix */
     [data-testid="stHorizontalBlock"] {
         flex-wrap: nowrap !important;
-        gap: 1rem !important;
-        padding: 1rem !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
+        gap: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
     }
 
     /* Tooltip styles */
@@ -249,7 +249,7 @@ st.markdown(
         position: relative;
         display: inline-block;
         cursor: pointer;
-        padding: 1rem !important;
+        padding: 0 !important;
     }
     
     .tooltip .tooltiptext {
@@ -278,55 +278,77 @@ st.markdown(
     /* Streamlit elements width fix */
     .element-container, .stDateInput, .stNumberInput {
         width: 100% !important;
-        padding: 1rem !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
     }
 
     /* Force full width on all Streamlit elements */
     .stMarkdown, .stDataFrame, .stSelectbox, .stMultiSelect, .stNumberInput, .stDateInput, .stTextInput, .stButton {
         width: 100% !important;
-        max-width: 1200px !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Ensure all containers take full width */
     .main .block-container, .stApp, .stApp > div, .element-container, .stMarkdown, .stDataFrame {
         width: 100% !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 1rem !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     /* File uploader styles */
     .stFileUploader {
         width: 100% !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
-        max-width: 1200px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
     }
 
     .stFileUploader > div {
         width: 100% !important;
-        padding: 1rem !important;
-        margin: 0 auto !important;
-        max-width: 1200px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
     }
 
     /* Ensure buttons are visible */
     .stButton {
-        width: auto !important;
-        padding: 1rem !important;
-        margin: 0.5rem !important;
-        max-width: 1200px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
     }
 
     .stButton > button {
-        width: auto !important;
-        min-width: 150px !important;
-        padding: 0.5rem 1rem !important;
-        margin: 0.5rem !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        padding: 0.5rem !important;
+        margin: 0 !important;
+    }
+
+    /* Override any potential width restrictions */
+    * {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Force full width on the root element */
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Ensure the main container takes full width */
+    #root {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     </style>
     """,
